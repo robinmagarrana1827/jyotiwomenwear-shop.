@@ -3,32 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Shopping</title>
+    <title>Jyoti Women Wear Shop</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>My Online Shop</h1>
-    </header>
-    <section class="shop">
-        <div class="item">
-            <img src="https://via.placeholder.com/150" alt="Product A">
-            <h2>Product A</h2>
-            <p>$10.00</p>
-            <button onclick="addToCart('Product A', 10)">Add to Cart</button>
+    <nav class="navbar">
+        <div class="logo">Jyoti Women Wear</div>
+        <button class="cart-btn" onclick="toggleCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+    </nav>
+    <main>
+        <h1 class="headline">Latest Collection</h1>
+        <section class="shop">
+            <!-- Products will be injected by JS -->
+        </section>
+    </main>
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <h2>Your Cart</h2>
+            <ul id="cart"></ul>
+            <p id="total"></p>
+            <button onclick="checkout()" class="checkout-btn">Checkout</button>
+            <button onclick="toggleCart()" class="close-cart">Close</button>
         </div>
-        <div class="item">
-            <img src="https://via.placeholder.com/150" alt="Product B">
-            <h2>Product B</h2>
-            <p>$20.00</p>
-            <button onclick="addToCart('Product B', 20)">Add to Cart</button>
-        </div>
-    </section>
-    <aside>
-        <h2>Your Cart</h2>
-        <ul id="cart"></ul>
-        <p id="total"></p>
-    </aside>
+    </div>
+    <footer>
+        <p>© 2025 Jyoti Women Wear. All rights reserved.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
